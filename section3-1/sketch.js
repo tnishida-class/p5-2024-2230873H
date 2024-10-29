@@ -1,16 +1,22 @@
-// テキスト「リサイズするプログラムを作る」
+let size = 50;
+  let count = 0;
+let cycle = 100;
+let increment = 1;
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(200, 200);
 }
-
-function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 function draw(){
   background(160, 192, 255);
-  for(let i = 0; i < 10; i++){
-    ellipse(width * i / 10, height * (10 - i) / 10, 20);
+ count = (count + increment) % cycle;
+  if (keyIsPressed) {
+  increment = 2;
+} else {
+ increment = 1;
   }
-  text("center!", width * 0.5, height * 0.5);
+  if (count < cycle/2) {
+ size = count + 50;
+ } else {
+ size = (cycle - count) + 50;
+ }
+ ellipse(width/2, height/2, size);
 }

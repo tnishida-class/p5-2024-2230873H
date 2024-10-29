@@ -15,9 +15,7 @@ function setup() {
       }
       if(((i+j)% 2 === 1)&&(j<3)){
         FileList(255,0,0);
-        ellipse(x+s?2, y+s/2,d);
+        ellipse(x+s?2 y+s/2,d);
       }
       if
-    }
-  }
-}
+    }}}
