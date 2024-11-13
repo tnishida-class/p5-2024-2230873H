@@ -1,22 +1,19 @@
-let size = 50;
-  let count = 0;
-let cycle = 100;
-let increment = 1;
 function setup(){
-  createCanvas(200, 200);
+  createCanvas(windowWidth, windowHeight); // キャンバスの大きさをウィンドウの大きさと同じにする
 }
+
+function windowResized(){ // ウィンドウがリサイズされるたびにこの関数が自動的に実行される
+  resizeCanvas(windowWidth, windowHeight); // キャンバスをリサイズする（createCanvasではないので注意）
+}
+
 function draw(){
   background(160, 192, 255);
- count = (count + increment) % cycle;
-  if (keyIsPressed) {
-  increment = 2;
-} else {
- increment = 1;
+}
+
+function draw(){
+  background(160, 192, 255);
+  for(let i = 0; i < 10; i++){
+    ellipse(width * i / 10, height * (10 - i) / 10, 20);
   }
-  if (count < cycle/2) {
- size = count + 50;
- } else {
- size = (cycle - count) + 50;
- }
- ellipse(width/2, height/2, size);
+  text("center!", width * 0.5, height * 0.5);
 }

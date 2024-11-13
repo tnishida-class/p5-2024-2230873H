@@ -10,14 +10,14 @@ function draw(){
   background(160, 192, 255);
  count = (count + increment) % cycle;
   if (keyIsPressed) {
-  increment = 5;
-} else {
+  increment = 2;}
+  else {
  increment = 1;
   }
   if (count < cycle/2) {
  size = count + 50;
  } else {
  size = (cycle - count) + 50;
- }
+ }      
  ellipse(width/2, height/2, size);
 }
