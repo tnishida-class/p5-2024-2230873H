@@ -1,14 +1,14 @@
 // テキスト「アニメーションの基本」
 let x, y, vx, vy;
-const g = 9; // 重力加速度
-const vyMax = 30;
+const g = 1; // 重力加速度
+const vyMax = 20;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
-  vx = 8;
-  vy = 8;
+  vx = 2;
+  vy = 2;
 }
 
 function draw(){
