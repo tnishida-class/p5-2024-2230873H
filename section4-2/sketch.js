@@ -2,11 +2,10 @@
 // 練習問題：ボールのサイズをランダムに変更してみよう
 // 練習問題：何も操作しなくてもボールが湧いてくる機能を追加しよう
 
-let balls;
+let balls = [];
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  balls = [];
 }
 
 function draw(){
