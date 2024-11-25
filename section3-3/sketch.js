@@ -9,11 +9,13 @@ function setup(){
   x = width / 2;
   y = height - 25;
   vy = 0
+
 }
 
 function draw(){
   background(160, 192, 255);
   ellipse(x, y, 50);
+  
   if(keyIsDown(LEFT_ARROW)){ x -= 5; }
   if(keyIsDown(RIGHT_ARROW)){ x += 5; }
   if(keyIsDown("A".charCodeAt(0))&&keyIsDown(RIGHT_ARROW)){ x+= 10; }
