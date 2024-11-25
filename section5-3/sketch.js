@@ -27,6 +27,13 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+let days = 0;
+for(let i = 1; i < 13; i++){
+  days += daysInMonth(y, i)
+  return days
+}
+
+
 }
 
 function daysInMonth(y, m){
@@ -51,6 +58,8 @@ function dayOfYear(y, m, d){
 
 function dayOfWeek(y, m, d){
   // BLANK[2]
+
+  //dayOfWeek(2021,6,24)は0(日曜日)
 }
 
 function dayOfWeekAsString(dow){
