@@ -1,11 +1,6 @@
 // 最終課題を制作しよう
 
-// テキスト「キーボード操作に反応する」
- // ジャンプ力（いろいろな値を試してみましょう）
 
-
-// テキスト「キーボード操作に反応する」
-// テキスト「キーボード操作に反応する」
 let x, y, vy;
 const g = 1;     // 重力（いろいろな値を試してみましょう）
 const jump = 30; // ジャンプ力（いろいろな値を試してみましょう）
@@ -27,6 +22,7 @@ function draw(){
   else if(x> width*2/3-25){
     ellipse(x,y, 50)
   }
+
   line(0, height-15, width*2/3, height-15);
   line(width*2/3, height-15, width*2/3,height-200);
   line(width*2/3, height-200, width, height-200);
