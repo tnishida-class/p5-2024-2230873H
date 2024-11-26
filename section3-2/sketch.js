@@ -1,14 +1,14 @@
 // テキスト「アニメーションの基本」
 let x, y, vx, vy;
 const g = 1; // 重力加速度
-const vyMax = 30;
+const vyMax = 20;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
-  vx = 8;
-  vy = 8;
+  vx = 2;
+  vy = 2;
 }
 
 function draw(){
@@ -21,16 +21,17 @@ function draw(){
   vy = constrain(vy + g, -vyMax, vyMax);
 
   // 端の処理パターン (1) 反対側から出てくる
-  // if(x > width){ x = 0; }
-  // else if(x < 0){ x = width; }
-  // if(y > height){ y = 0; }
-  // if(y < 0){ y = height; }
-
+  //if(x > width){ x = 0; }
+  //else if(x < 0){ x = width; }
+  //if(y > height){ y = 0; }
+  //if(y < 0){ y = height; }
+  x = (x + width) % width;
+  y = (y + height) % height;
 　// 端の処理パターン (2) 跳ね返る
-  if(x < 0 || x > width){ vx = -1 * vx; }
-  if(y > height){ vy = -1 * vy; }
-  x = constrain(x, 0, width);
-  y = constrain(y, 0, height);
+  //if(x < 0 || x > width){ vx = -1 * vx; }
+  //if(y > height){ vy = -1 * vy; }
+  //x = constrain(x, 0, width);
+  //y = constrain(y, 0, height);
 }
 
 function windowResized(){
